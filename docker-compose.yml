@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  groupmaker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: groupmaker
+    ports:
+      - "8088:8080"
+    env_file: .env
+    restart: always
